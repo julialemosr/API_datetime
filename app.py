@@ -5,6 +5,25 @@ app = Flask(__name__)
 
 @app.route('/verificar_data/<ano>-<mes>-<dia>')
 def verificar_data(ano,mes,dia):
+
+    """
+    :param ano: Ano desejado pelo usuário.
+    :param mes: Mês desejado pelo usuário.
+    :param dia: Dia desejado pelo usuário.
+    :return: Retorna o período de tempo (passado,presente e futuro).
+
+    #Resposta (JSON)
+    {
+            'situacao': situacao,
+            'dias_diferenca': str(dia_diferenca),
+            'meses_diferenca': meses_diferenca,
+            'anos_diferenca': anos_diferenca,
+        }
+
+    #Erros Possíveis:
+    {"erro": "Formato de data inválido. Use YYYY-MM-DD.t"}
+    """
+
     try:
         ano = int(ano)
         mes = int(mes)
