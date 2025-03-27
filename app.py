@@ -7,6 +7,9 @@ app = Flask(__name__)
 def verificar_data(ano,mes,dia):
 
     """
+    #Endpoint:
+    'GET /verificar_data/<ano>-<mes>-<dia>'
+
     :param ano: Ano desejado pelo usuário.
     :param mes: Mês desejado pelo usuário.
     :param dia: Dia desejado pelo usuário.
